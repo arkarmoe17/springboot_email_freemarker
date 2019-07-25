@@ -5,7 +5,6 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
     <!-- use the font -->
@@ -13,6 +12,8 @@
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 16px;
+            margin : 0;
+            padding :0;
         }
         table, th, td {
           border: 1px solid black;
@@ -20,7 +21,7 @@
         }
     </style>
 </head>
-<body style="margin: 0; padding: 0;">
+<body>
 
 <p><b>Dear ${name}</b></p>
 <p>Please check for the site was down below. Please share with us root cause and fill in the form below :</p>

@@ -1,6 +1,7 @@
 package com.arkarmoe.email_notification.controller;
 
 import com.arkarmoe.email_notification.model.MailModel;
+import com.arkarmoe.email_notification.model.response.EmailResponse;
 import com.arkarmoe.email_notification.service.SendingEmailService;
 import freemarker.template.TemplateException;
 import org.slf4j.Logger;
@@ -32,6 +33,23 @@ public class EmailController {
     private SendingEmailService sendingEmailService;
 
     @PostMapping("/send")
+    public EmailResponse sendEmailRequest(@RequestBody MailModel mailModel){
+        try {
+            sendingEmailService.sendEmail(mailModel);
+            return new EmailResponse("0","Successful");
+        } catch (MessagingException e) {
+            e.printStackTrace();
+            return new EmailResponse("1",e.getMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new EmailResponse("1",e.getMessage());
+        } catch (TemplateException e) {
+            e.printStackTrace();
+            return new EmailResponse("1",e.getMessage());
+        }
+    }
+
+    /*@PostMapping("/send")
     public ResponseEntity<?> sendEmailRequest(@RequestBody MailModel mailModel){
         try {
             sendingEmailService.sendEmail(mailModel);
@@ -46,7 +64,7 @@ public class EmailController {
             e.printStackTrace();
             return ResponseEntity.ok().body(e.getMessage());
         }
-    }
+    }*/
 
 
 
