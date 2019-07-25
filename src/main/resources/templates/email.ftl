@@ -49,7 +49,7 @@
 </table>
 <br>
 <p>Thanks</p>
-<img src="cid:logo" style="display: block;" />
+<!--<img src="cid:logo" style="display: block;" />-->
 
 </body>
 </html>

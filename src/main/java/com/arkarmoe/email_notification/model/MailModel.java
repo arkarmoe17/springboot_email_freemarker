@@ -2,7 +2,10 @@ package com.arkarmoe.email_notification.model;
 
 import java.util.Map;
 
-
+/**
+ * Created by Arkar Moe
+ * 25-July-2019
+ * **/
 public class MailModel {
     private String[] to;
     private String name;
